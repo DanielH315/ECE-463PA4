@@ -4,7 +4,7 @@ CFLAGS = -std=gnu99 -g -O3
 
 default: all
 
-all: http_server db_server
+all: http_client
 
 %.o: %.c
 	$(CC) -c -o $@ $< $(CFLAGS)
@@ -16,5 +16,3 @@ all: http_server db_server
 
 .PHONY: default all
 
-clean:
-	rm -f http_server; rm -f db_server
